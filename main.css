@@ -1,0 +1,107 @@
+body{
+    margin: 0;
+    background-color: black;
+}
+
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 10;
+    overflow: auto;
+    width: 100%;
+    gap: 10px;
+    opacity: .5;
+    background-color: transparent;
+    position: absolute;
+    
+    
+}
+
+#search-card {
+    width: 100%;
+    max-width: 800px;
+    background-color: transparent;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 25px;
+    text-align: center;
+    
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    width: 100%;
+    max-width: 800px;
+}
+
+.card {
+    padding: 15px;
+    border-radius: 25px;
+    background-image: linear-gradient(to bottom right, aqua, yellow);
+    box-sizing: border-box;
+    opacity: 0;
+}
+
+#forecast-card {
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    background: lightblue;
+    border-radius: 25px;
+    box-sizing: border-box;
+}
+
+#forecast-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+    overflow: hidden;
+}
+
+.forecast-item {
+    flex: 1 1 calc(20% - 10px); /* Ensures five items fit within the width */
+    max-width: 120px; /* Optional cap to prevent items from growing too large */
+    border: 3px solid black;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+.forecast-img {
+    width: 50px; /* Smaller image for better fit */
+}
+#forecast-card h3 {
+    display: inline;
+}
+
+#temp-card h3 {
+    display: inline;
+}
+
+#wind-card h3 {
+    display: inline;
+}
+
+#hum-card h3 {
+    display: inline;
+}
+
+#sunset-card h3 {
+    display: inline;
+}
+
+#airp-card h3 {
+    display: inline;
+}
+

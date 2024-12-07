@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="weather.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+
+    <script defer type="module" src="/animations/main.js"></script>
+
+
+    
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div id="search-card" class="card">
+            <img id="search-img" src="img/search.svg" width="30px">
+            <input id="city-input" type="text" placeholder="Enter a city">
+            <br>
+            <button id="search-button" onclick="checkWeather()">Get Weather!</button>
+        </div>
+        <div class="grid-container">
+            <div id="img-card" class="card hidden">
+                <img src="img/location.svg" width="20px">
+                <h2 id="city"></h2>
+                <img id="weather-img" src="img/partlyCloudy.svg" width=80px>
+                <p id="temp">Temp</p>
+            </div>
+            <div id="temp-card" class="card hidden">
+                <img src="img/thermometer.svg" width="20px">
+                <h3>Temps</h3>
+                <p id="feels-like">Feels like</p>
+                <p id="max">Temp Max</p>
+                <p id="min">Temp Min</p>
+            </div>
+            <div id="wind-card" class="card hidden">
+                <img src="img/wind.svg" width="20px">
+                <h3>Wind</h3>
+                <p id="wind">Wind</p>
+                <p id="gust">Gust</p>
+            </div>
+            <div id="sunset-card" class="card hidden">
+                <img src="img/sunrise.svg" width="20px">
+                <h3>Sunrise & Sunset</h3>
+                <p id="sunset">sunset</p>
+                <p id="sunrise">sunrise</p>
+            </div>
+        </div>
+        <div id="forecast-card" class="card hidden">
+            <img src="img/calender.svg" width="20px">
+            <h3>Forecast</h3>
+            <div id="forecast-container">
+                <div class="forecast-item">
+                    <h5 id="forecast-date0">14 Sep</h5>
+                    <img src="img/thunder.svg" id="forecast-img0" class="forecast-img">
+                    <h5 id="forecast-temp0">45 F</h5>
+                </div>
+                <div class="forecast-item">
+                    <h5 id="forecast-date1">14 Sep</h5>
+                    <img src="img/thunder.svg" id="forecast-img1" class="forecast-img">
+                    <h5 id="forecast-temp1">45 F</h5>
+                </div>
+                <div class="forecast-item">
+                    <h5 id="forecast-date2">14 Sep</h5>
+                    <img src="img/thunder.svg" id="forecast-img2" class="forecast-img">
+                    <h5 id="forecast-temp2">45 F</h5>
+                </div>
+                <div class="forecast-item">
+                    <h5 id="forecast-date3">14 Sep</h5>
+                    <img src="img/thunder.svg" id="forecast-img3" class="forecast-img">
+                    <h5 id="forecast-temp3">45 F</h5>
+                </div>
+                <div class="forecast-item">
+                    <h5 id="forecast-date4">14 Sep</h5>
+                    <img src="img/thunder.svg" id="forecast-img4" class="forecast-img">
+                    <h5 id="forecast-temp4">45 F</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        gsap.to(".card", {
+            duration: 3,
+            opacity: 1,
+            delay: 1
+        })
+    </script>
+
+</body>
+
+</html>
